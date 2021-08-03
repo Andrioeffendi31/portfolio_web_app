@@ -58,7 +58,7 @@ class Skills extends StatelessWidget {
             Expanded(
               child: AnimatedCircularProgressBar(
                 percentage: 0.75,
-                label: "Adobe\nAfter Effect",
+                label: "Adobe\nAfter FX",
               ),
             ),
             SizedBox(width: defaultPadding),

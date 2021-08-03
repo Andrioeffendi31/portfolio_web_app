@@ -81,20 +81,21 @@ class CustomAnimatedText extends StatelessWidget {
           SizedBox(width: defaultPadding / 2),
           Text(" I build "),
           AnimatedTextKit(
+            repeatForever: true,
             animatedTexts: [
-              TyperAnimatedText(
+              TypewriterAnimatedText(
                 "java native mobile app",
                 speed: Duration(milliseconds: 60),
               ),
-              TyperAnimatedText(
+              TypewriterAnimatedText(
                 "responsive flutter web and mobile app",
                 speed: Duration(milliseconds: 60),
               ),
-              TyperAnimatedText(
+              TypewriterAnimatedText(
                 "2D and 3D games using Unity C#",
                 speed: Duration(milliseconds: 60),
               ),
-              TyperAnimatedText(
+              TypewriterAnimatedText(
                 "responsive web app using semantic UI & Codeigniter",
                 speed: Duration(milliseconds: 60),
               ),
