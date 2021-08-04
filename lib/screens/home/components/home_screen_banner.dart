@@ -2,6 +2,7 @@ import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 
 import '../../../constants.dart';
+import '../../../responsive.dart';
 
 class HomeScreenBanner extends StatelessWidget {
   const HomeScreenBanner({
@@ -28,33 +29,47 @@ class HomeScreenBanner extends StatelessWidget {
               children: [
                 Text(
                   "Hello !",
-                  style: Theme.of(context).textTheme.headline2!.copyWith(
+                  style: Responsive.isDesktop(context) ?
+                  Theme.of(context).textTheme.headline3!.copyWith(
                     fontWeight: FontWeight.bold,
                     color: Colors.white,
-                  ),
+                  ) :
+                  Theme.of(context).textTheme.headline4!.copyWith(
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                  )
                 ),
                 Text(
                   "I'm Andrio (アンドリオ)",
-                  style: Theme.of(context).textTheme.headline3!.copyWith(
+                  style: Responsive.isDesktop(context) ?
+                  Theme.of(context).textTheme.headline3!.copyWith(
                     fontWeight: FontWeight.bold,
                     height: 1,
                     color: Colors.white,
-                  ),
+                  ) :
+                  Theme.of(context).textTheme.headline4!.copyWith(
+                    fontWeight: FontWeight.bold,
+                    height: 1,
+                    color: Colors.white,
+                  )
                 ),
                 SizedBox(height: defaultPadding / 2),
                 CustomAnimatedText(),
                 SizedBox(height: defaultPadding),
-                ElevatedButton(
-                  onPressed: () {},
-                  style: TextButton.styleFrom(
-                    padding: EdgeInsets.symmetric(
-                        horizontal: defaultPadding * 2,
-                        vertical: defaultPadding),
-                    backgroundColor: primaryColor,
-                  ),
-                  child: Text(
-                    "EXPLORE NOW",
-                    style: TextStyle(color: darkColor),
+                if(!Responsive.isMobileLarge(context))
+                SizedBox(
+                  child: ElevatedButton(
+                    onPressed: () {},
+                    style: TextButton.styleFrom(
+                      padding: EdgeInsets.symmetric(
+                          horizontal: defaultPadding * 2,
+                          vertical: defaultPadding),
+                      backgroundColor: primaryColor,
+                    ),
+                    child: Text(
+                      "EXPLORE NOW",
+                      style: TextStyle(color: darkColor),
+                    ),
                   ),
                 ),
               ],

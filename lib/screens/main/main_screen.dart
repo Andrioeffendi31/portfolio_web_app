@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portofolio_web_app/constants.dart';
+import 'package:portofolio_web_app/responsive.dart';
 
 import 'components/side_menu.dart';
 
@@ -11,12 +12,27 @@ class MainScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: Responsive.isDesktop(context)
+          ? null :
+      AppBar(
+        backgroundColor: bgColor,
+        leading: Builder(
+          builder: (context) => IconButton(
+            onPressed: () {
+              Scaffold.of(context).openDrawer();
+            },
+            icon: Icon(Icons.menu),
+          ),
+        ),
+      ),
+      drawer: SideMenu(),
       body: Center(
         child: Container(
           constraints: BoxConstraints(maxWidth: maxWidth),
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              if(Responsive.isDesktop(context))
               Expanded(
                 //take (2+7 = 9) so 2/9 = 0.22 means 22%
                 flex: 2,
@@ -27,6 +43,7 @@ class MainScreen extends StatelessWidget {
                 //take (7/9 = 0.78) means 78%
                 flex: 7,
                 child: SingleChildScrollView(
+                  physics: BouncingScrollPhysics(),
                   child: Column(
                     children: [
                       ...children,
