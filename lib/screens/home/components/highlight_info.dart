@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portofolio_web_app/components/text_counter.dart';
+import 'package:portofolio_web_app/responsive.dart';
 
 import '../../../constants.dart';
 import 'highlight_component.dart';
@@ -12,8 +13,52 @@ class HighLightInfo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: defaultPadding),
-      child: Row(
+      padding: Responsive.isMobileLarge(context) ? const EdgeInsets.symmetric(vertical: defaultPadding, horizontal: defaultPadding / 2) :
+      const EdgeInsets.symmetric(vertical: defaultPadding, horizontal: defaultPadding),
+      child: Responsive.isMobileLarge(context) ?
+      Column(
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              HighLightComponent(
+                counter: TextCounter(
+                  value: 420,
+                  text: "+",
+                ),
+                label: "IG Followers",
+              ),
+              HighLightComponent(
+                counter: TextCounter(
+                  value: 160,
+                  text: "+",
+                ),
+                label: "Illustrations",
+              ),
+            ],
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              HighLightComponent(
+                counter: TextCounter(
+                  value: 60,
+                  text: "+",
+                ),
+                label: "UI/UX Design",
+              ),
+              HighLightComponent(
+                counter: TextCounter(
+                  value: 15,
+                  text: "+",
+                ),
+                label: "Github Projects",
+              ),
+            ],
+          ),
+        ],
+      ) :
+      Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           HighLightComponent(
@@ -43,13 +88,6 @@ class HighLightInfo extends StatelessWidget {
               text: "+",
             ),
             label: "Projects",
-          ),
-          HighLightComponent(
-            counter: TextCounter(
-              value: 20,
-              text: "+",
-            ),
-            label: "Github Projects",
           ),
         ],
       ),

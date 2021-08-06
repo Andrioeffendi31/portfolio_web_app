@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portofolio_web_app/models/Project.dart';
+import 'package:portofolio_web_app/responsive.dart';
 import 'package:portofolio_web_app/screens/home/components/project_item.dart';
 
 import '../../../constants.dart';
@@ -12,28 +13,83 @@ class MyProjects extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        Text(
-          "My Projects",
-          style: Theme.of(context).textTheme.headline6,
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: defaultPadding),
+          child: Container(
+            alignment: Alignment.center,
+            width: maxWidth,
+            height: Responsive.isMobileLarge(context) ? 54 : 68,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(15),
+              gradient: LinearGradient(
+                colors: [
+                  const Color(0xFFFEA117),
+                  const Color(0xFFFEBE1F),
+                ],
+                begin: const FractionalOffset(1.0, 0.0),
+                end: const FractionalOffset(1.0, 0.0),
+                stops: [0.0, 1.0],
+                tileMode: TileMode.clamp,
+              ),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.grey.withOpacity(0.1),
+                  spreadRadius: 2,
+                  blurRadius: 4,
+                  offset: Offset(0, 0), // changes position of shadow
+                ),
+              ],
+            ),
+            child: Text(
+              "My Projects",
+              style: Theme.of(context).textTheme.headline6!.copyWith(
+                color: Colors.white,
+                fontWeight: FontWeight.w800,
+              ),
+            ),
+          ),
         ),
         const SizedBox(height: defaultPadding),
-        GridView.builder(
-          shrinkWrap: true,
-          physics: NeverScrollableScrollPhysics(),
-          itemCount: demo_projects.length,
-          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 3,
-            childAspectRatio: 1.3,
-            crossAxisSpacing: defaultPadding,
-            mainAxisSpacing: defaultPadding,
-          ),
-          itemBuilder: (context, index) => ProjectItem(
-            project: demo_projects[index],
-          ),
+        Responsive(
+            mobile: GridViewInfo(
+                crossAxisCount: 1,
+                childAspectRatio: 1.3
+            ),
+            mobileLarge: GridViewInfo(crossAxisCount: 2, childAspectRatio: 0.9,),
+            tablet: GridViewInfo(childAspectRatio: 0.8),
+            desktop: GridViewInfo(),
         ),
       ],
+    );
+  }
+}
+
+class GridViewInfo extends StatelessWidget {
+  const GridViewInfo({
+    Key? key, this.crossAxisCount = 3, this.childAspectRatio = 1.2,
+  }) : super(key: key);
+
+  final int crossAxisCount;
+  final double childAspectRatio;
+
+  @override
+  Widget build(BuildContext context) {
+    return GridView.builder(
+      padding: EdgeInsets.all(16.0),
+      shrinkWrap: true,
+      physics: NeverScrollableScrollPhysics(),
+      itemCount: demo_projects.length,
+      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+        crossAxisCount: crossAxisCount,
+        childAspectRatio: childAspectRatio,
+        crossAxisSpacing: defaultPadding,
+        mainAxisSpacing: defaultPadding,
+      ),
+      itemBuilder: (context, index) => ProjectItem(
+        project: demo_projects[index],
+      ),
     );
   }
 }

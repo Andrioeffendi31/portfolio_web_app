@@ -16,9 +16,15 @@ class Recomendations extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
-            "Recommendations",
-            style: Theme.of(context).textTheme.headline6,
+          Padding(
+            padding: const EdgeInsets.only(left: defaultPadding),
+            child: Text(
+              "Recommendations",
+              style: Theme.of(context).textTheme.headline6!.copyWith(
+                color: secondaryColor,
+                fontWeight: FontWeight.w800,
+              ),
+            ),
           ),
           const SizedBox(height: defaultPadding),
           SingleChildScrollView(
@@ -27,12 +33,9 @@ class Recomendations extends StatelessWidget {
             child: Row(
               children: List.generate(
                   demo_recommendations.length,
-                      (index) => Padding(
-                    padding: const EdgeInsets.only(right: defaultPadding),
-                    child: RecommendationItem(
+                    (index) => RecommendationItem(
                       recommendation: demo_recommendations[index],
                     ),
-                  )
               ),
             ),
           ),

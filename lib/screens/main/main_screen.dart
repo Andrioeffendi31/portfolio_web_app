@@ -21,38 +21,43 @@ class MainScreen extends StatelessWidget {
             onPressed: () {
               Scaffold.of(context).openDrawer();
             },
-            icon: Icon(Icons.menu),
+            icon: Icon(Icons.menu, color: Color(0xFF8A74FC)),
           ),
         ),
       ),
       drawer: SideMenu(),
       body: Center(
-        child: Container(
-          constraints: BoxConstraints(maxWidth: maxWidth),
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              if(Responsive.isDesktop(context))
-              Expanded(
-                //take (2+7 = 9) so 2/9 = 0.22 means 22%
-                flex: 2,
-                child: SideMenu(),
-              ),
-              SizedBox(width: defaultPadding),
-              Expanded(
-                //take (7/9 = 0.78) means 78%
-                flex: 7,
-                child: SingleChildScrollView(
-                  physics: BouncingScrollPhysics(),
-                  child: Column(
-                    children: [
-                      ...children,
-                      //footer
-                    ],
+        child: Padding(
+          padding: Responsive.isDesktop(context) ? const EdgeInsets.symmetric(horizontal: 16.0) : const EdgeInsets.symmetric(horizontal: 0.0),
+          child: Container(
+            constraints: BoxConstraints(maxWidth: 1620),
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                if(Responsive.isDesktop(context))
+                Expanded(
+                  //take (2+7 = 9) so 2/9 = 0.22 means 22%
+                  flex: 3,
+                  child: SideMenu(),
+                ),
+                SizedBox(width: defaultPadding),
+                Expanded(
+                  //take (7/9 = 0.78) means 78%
+                  flex: 11,
+                  child: SingleChildScrollView(
+                    padding: EdgeInsets.only(right: defaultPadding / 2, top: defaultPadding),
+                    physics: BouncingScrollPhysics(),
+                    child: Column(
+                      children: [
+                        ...children,
+                        //footer
+                      ],
+                    ),
                   ),
                 ),
-              ),
-            ],
+                SizedBox(width: defaultPadding / 2),
+              ],
+            ),
           ),
         ),
       ),
