@@ -18,16 +18,17 @@ class HomeScreenBanner extends StatelessWidget {
         child: Container(
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(15),
-            gradient: LinearGradient(
-              colors: [
-                const Color(0xFF8A74FC),
-                const Color(0xFFB48AFF),
-              ],
-              begin: const FractionalOffset(0.0, 1.0),
-              end: const FractionalOffset(1.0, 0.0),
-              stops: [0.0, 1.0],
-              tileMode: TileMode.clamp,
-            ),
+            // gradient: LinearGradient(
+            //   colors: [
+            //     const Color(0xFF8A74FC),
+            //     const Color(0xFFB48AFF),
+            //   ],
+            //   begin: const FractionalOffset(0.0, 1.0),
+            //   end: const FractionalOffset(1.0, 0.0),
+            //   stops: [0.0, 1.0],
+            //   tileMode: TileMode.clamp,
+            // ),
+            image: DecorationImage(image: AssetImage("assets/images/banner.jpg"), fit: BoxFit.cover),
             boxShadow: [
               BoxShadow(
                 color: Colors.grey.withOpacity(0.3),
@@ -40,10 +41,6 @@ class HomeScreenBanner extends StatelessWidget {
           child: Stack(
             fit: StackFit.expand,
             children: [
-              // Image.asset(
-              //   "assets/images/bg.jpeg",
-              //   fit: BoxFit.cover,
-              // ),
               Padding(
                 padding: Responsive.isMobileLarge(context) ? const EdgeInsets.symmetric(horizontal: defaultPadding) : const EdgeInsets.symmetric(horizontal: defaultPadding * 2),
                 child: Column(
