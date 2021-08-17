@@ -56,7 +56,7 @@ class HomeScreenBanner extends StatelessWidget {
                         fontWeight: FontWeight.bold,
                         color: Colors.white,
                       ) : Responsive.isMobileLarge(context) ?
-                      Theme.of(context).textTheme.headline5!.copyWith(
+                      Theme.of(context).textTheme.headline6!.copyWith(
                         fontWeight: FontWeight.bold,
                         color: Colors.white,
                       ) :
@@ -74,7 +74,7 @@ class HomeScreenBanner extends StatelessWidget {
                         height: 1,
                         color: Colors.white,
                       ) : Responsive.isMobileLarge(context) ?
-                      Theme.of(context).textTheme.headline5!.copyWith(
+                      Theme.of(context).textTheme.headline6!.copyWith(
                         fontWeight: FontWeight.bold,
                         color: Colors.white,
                         height: 1,

@@ -45,7 +45,7 @@ class MyArts extends StatelessWidget {
           child: Responsive(
             mobile: GridViewArt(
                 crossAxisCount: 1,
-                childAspectRatio: 1.4
+                childAspectRatio: 1.2
             ),
             mobileLarge: GridViewArt(crossAxisCount: 1, childAspectRatio: 1.6,),
             tablet: GridViewArt(childAspectRatio: 1.5),
@@ -76,7 +76,7 @@ class GridViewArt extends StatelessWidget {
         crossAxisCount: crossAxisCount,
         childAspectRatio: childAspectRatio,
         crossAxisSpacing: defaultPadding * 5,
-        mainAxisSpacing: defaultPadding * 4,
+        mainAxisSpacing: Responsive.isMobileLarge(context) ? defaultPadding * 2 : defaultPadding * 4,
       ),
       itemBuilder: (context, index) => ArtItem(
         artDesk: artsDesktop[index],

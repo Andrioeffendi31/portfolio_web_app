@@ -38,8 +38,8 @@ class ArtBanner extends StatelessWidget {
               builder: DotSwiperPaginationBuilder(
                   activeColor: primaryColor,
                   color: secondaryColor,
-                  activeSize: 16,
-                  space: 8
+                  activeSize: Responsive.isMobileLarge(context) ? 8 : 16,
+                  space: Responsive.isMobileLarge(context) ? 6 : 8
               ),
             ),
             viewportFraction: 1,
@@ -103,8 +103,8 @@ class ArtBanner extends StatelessWidget {
                                               height: 1,
                                               color: Colors.white,
                                             ) : Responsive.isMobileLarge(context) ?
-                                            Theme.of(context).textTheme.headline4!.copyWith(
-                                              fontSize: 16,
+                                            Theme.of(context).textTheme.headline5!.copyWith(
+                                              fontSize: 14,
                                               fontWeight: FontWeight.normal,
                                               color: Colors.white,
                                               height: 1,
