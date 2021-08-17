@@ -1,0 +1,4 @@
+io/flutter/plugins/GeneratedPluginRegistrant.java
+ io.flutter.plugins.GeneratedPluginRegistrant
+com/kumakuma/portofolio_web_app/BuildConfig.java
+ com.kumakuma.portofolio_web_app.BuildConfig
