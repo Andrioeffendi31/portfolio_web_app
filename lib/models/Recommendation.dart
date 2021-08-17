@@ -6,27 +6,27 @@ class Recommendation {
 
 final List<Recommendation> demo_recommendations = [
   Recommendation(
-    name: "Kolapo Obanewa",
-    source: "Linkedin",
+    name: "Ricky Herdian",
+    source: "Founder of Fusion R",
     text:
-    "I have had the pleasure of working with Anwar on two flutter projects and what strikes me the most about his work is his ability to write clean and reusable codes with best practices. He is hardworking and makes it so easy to transcribe ideas into beautiful and testable flutter apps. He is a Flutter/Dart gem and has my highest recommendation",
+    "Rio is a very creative person, he made the poster for my newest product very well. Praise God, these products can be sold in the market. I hope we can continue to work together to find new innovations. I hope we can continue to work together to find new innovations.",
   ),
   Recommendation(
-    name: "Reza Shahbazi",
-    source: "Linkedin",
+    name: "Reinaldy",
+    source: "Owner of Cheap Me",
     text:
-    "Abu is great asset for any organization. It's a true pleasure working with him at TakeIn. His flutter skill is amazing as well as his professionalism and being a good team player. Abu's problem solving skill is also one of his great skills.",
+    "Andrio is one of the designer teams in our online store. He has made many banners for our product catalog to be displayed on the marketplace page. He is quite a unique and competent person.",
   ),
   Recommendation(
-    name: "Diadem",
-    source: "YouTube",
+    name: "Gerald Widyadhanna",
+    source: "3D Model Designer",
     text:
-    "I like your way you doing your project and you taught us. After I watch this I like and hit the subscribe button and then watch your video playlist one by one!! Within three hours, I learned a lot! I share your channel in my college WhatsApp group!",
+    "Andrio is my friend as well as my partner in game development. He is an ambitious and fun person. I hope we can continue to work together and make games together in the future.",
   ),
   Recommendation(
-    name: "Roshan Shetty",
-    source: "YouTube",
+    name: "Lorem Ipsum",
+    source: "Kadokawa",
     text:
-    "Very straightforward, professional and also the best flutter videos in the youtube! It will be great if you add some comments to your steps with 0.5 seconds pause before implementing this step. By meaning of steps, I mean not the basic, but structural steps, like 10-20 steps per video. However, thank you very much!",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras facilisis tellus odio, eget vulputate ipsum eleifend non. Quisque nisi lectus, commodo ac enim vel, faucibus feugiat leo. ",
   ),
 ];

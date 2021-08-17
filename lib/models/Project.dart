@@ -6,33 +6,33 @@ class Project {
 
 List<Project> demo_projects = [
   Project(
-    title: "Responsive Admin Panel or Dashboard - Flutter UI",
+    title: "Small Change App - Java Native",
     description:
-    "On Flutter V2.* web officially supported on a stable branch. Today I share an Admin panel or you can call it dashboard UI build with flutter. Now you can build your app dashboard using flutter. This dashboard contains almost everything that you need like a chart, table, nice small card for showing info.",
+    "Small Change is a financial management app that will help you in performing daily financial management independently. This application was made for our Mobile Application Programming final project.",
   ),
   Project(
-    title: "E-Commerce Complate App - Flutter UI",
+    title: "Scurity SLip - Unity C#",
     description:
-    "In the first part of our complete e-commerce app, we show you how you can create a nice clean onboarding screen for your e-commerce app that can run both Andriod and iOS devices because it builds with flutter. Then on the second episode, we build a Sign in, Forgot Password screen with a custom error indicator.",
+    "It's an \"security-checkup\" based simulation game. Your job is to make sure all the people who comes in, comes ou- I mean umm... They have proper entry card. This game was made for our Game Development 2 final project.",
   ),
   Project(
-    title: "Outlook Email App Redesign - Flutter Fully Responsive Design UI",
+    title: "Fall Down - Unity C#",
     description:
-    "We redesign the outlook app also make it responsive so that you can run it everywhere on your phone, tab, or web. In this flutter responsive video, we will show you the real power of flutter. Make mobile, web, and desktop app from a single codebase.",
+    "Music Box is an Arcade based Rythm game where you control your character by tilting your device. Collect powerups to gain bonus score and extra lives, avoid obstacles, and try your best to get to the end of the song! Pick your choice from a collection of 11 different songs, each with their own unique layouts, length, and difficulty. Once you're in, you'll never get out!",
   ),
   Project(
-    title: "Chat/Messaging App Light and Dark Theme - Flutter UI",
+    title: "Knoledge - PHP, CodeIgniter 3",
     description:
-    "Today we gonna build messing/chat app #ui using #flutter that runs both Android and iOS devices also has a dark and light theme. We create in total 4 screens all of that support both Dark Theme and Light Theme. At first, we design a welcome screen that contains an image with a tag line also has a skip button.",
+    "Knoledge is a web application design for educational institutions to manage either students or employees according to their educational system. Teachers can assign scores, manage re-review requests and see how their students performing throughout their education. The student itself can also be logged in to access and view scores. This project was built for our Web Programming final project.",
   ),
   Project(
-    title: "Welcome page, Login Page and Sign up page - Flutter UI",
+    title: "Easter Festival - Unity C#",
     description:
-    "In the first part of our complete e-commerce app, we show you how you can create a nice clean onboarding screen for your e-commerce app that can run both Andriod and iOS devices because it builds with flutter. Then on the second episode, we build a Sign in, Forgot Password screen with a custom error indicator.",
+    "Easter Festival is a game made using unity to celebrate Easter. In this game, players are required to find eggs scattered in the game area. The player who gets the most eggs will be the winner.",
   ),
   Project(
-    title: "Covid-19 App - Flutter UI",
+    title: "Frogger - Unity C#",
     description:
-    "We redesign the outlook app also make it responsive so that you can run it everywhere on your phone, tab, or web. In this flutter responsive video, we will show you the real power of flutter. Make mobile, web, and desktop app from a single codebase.",
+    "This is a replica of the 1981 game Frogger (フロッガー, Furoggā). The object of the game is to direct frogs to their homes one by one by crossing a busy road and navigating a river full of hazards.",
   ),
 ];

@@ -1,3 +1,4 @@
+import 'package:delayed_display/delayed_display.dart';
 import 'package:flutter/material.dart';
 import 'package:portofolio_web_app/constants.dart';
 import 'package:portofolio_web_app/responsive.dart';
@@ -38,7 +39,10 @@ class MainScreen extends StatelessWidget {
                 Expanded(
                   //take (2+7 = 9) so 2/9 = 0.22 means 22%
                   flex: 3,
-                  child: SideMenu(),
+                  child: DelayedDisplay(
+                      delay: Duration(seconds: 1),
+                      child: SideMenu()
+                  ),
                 ),
                 SizedBox(width: defaultPadding),
                 Expanded(
@@ -47,11 +51,14 @@ class MainScreen extends StatelessWidget {
                   child: SingleChildScrollView(
                     padding: EdgeInsets.only(right: defaultPadding / 2, top: defaultPadding),
                     physics: BouncingScrollPhysics(),
-                    child: Column(
-                      children: [
-                        ...children,
-                        //footer
-                      ],
+                    child: DelayedDisplay(
+                      delay: Duration(seconds: 1),
+                      child: Column(
+                        children: [
+                          ...children,
+                          //footer
+                        ],
+                      ),
                     ),
                   ),
                 ),

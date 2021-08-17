@@ -64,6 +64,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.0.3"
+  delayed_display:
+    dependency: "direct main"
+    description:
+      name: delayed_display
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "2.0.0"
   fake_async:
     dependency: transitive
     description:
@@ -90,6 +97,13 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  flutter_page_indicator:
+    dependency: transitive
+    description:
+      name: flutter_page_indicator
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.0.3"
   flutter_svg:
     dependency: "direct main"
     description:
@@ -97,6 +111,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.22.0"
+  flutter_swiper:
+    dependency: "direct main"
+    description:
+      name: flutter_swiper
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.1.6"
   flutter_test:
     dependency: "direct dev"
     description: flutter
@@ -282,6 +303,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.3.0"
+  transformer_page_view:
+    dependency: transitive
+    description:
+      name: transformer_page_view
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.1.6"
   typed_data:
     dependency: transitive
     description:

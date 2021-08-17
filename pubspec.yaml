@@ -31,6 +31,8 @@ dependencies:
   flutter_svg: ^0.22.0
   animated_text_kit: ^4.2.1
   getwidget: ^2.0.3
+  flutter_swiper: ^1.1.6
+  delayed_display: ^2.0.0
 
 dev_dependencies:
   flutter_test:
@@ -50,6 +52,7 @@ flutter:
   assets:
     - assets/icons/
     - assets/images/
+    - assets/images/art_banner/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

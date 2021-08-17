@@ -16,11 +16,12 @@ class Recomendations extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          SizedBox(height: defaultPadding,),
           Padding(
             padding: const EdgeInsets.only(left: defaultPadding),
             child: Text(
               "Recommendations",
-              style: Theme.of(context).textTheme.headline6!.copyWith(
+              style: Theme.of(context).textTheme.headline5!.copyWith(
                 color: secondaryColor,
                 fontWeight: FontWeight.w800,
               ),

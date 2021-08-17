@@ -6,6 +6,7 @@ const darkColor = Color(0xFF7560E0);
 const bodyTextColor = Color(0xFF79EAE3);
 const bodyTextColor2 = Color(0xFF3C7472);
 const bgColor = Color(0xFF88FFF7);
+const redColor = Color(0xFFFF647B);
 
 const defaultPadding = 20.0;
 const defaultDuration = Duration(seconds: 1); // for animation

@@ -109,17 +109,17 @@ class SideMenu extends StatelessWidget {
                               Spacer(),
                               IconButton(
                                 onPressed: () {},
+                                icon: SvgPicture.asset("assets/icons/instagram.svg", color: Color(0xFF8A74FC)),
+                              ),
+                              Spacer(),
+                              IconButton(
+                                onPressed: () {},
+                                icon: SvgPicture.asset("assets/icons/facebook.svg", color: Color(0xFF8A74FC)),
+                              ),
+                              Spacer(),
+                              IconButton(
+                                onPressed: () {},
                                 icon: SvgPicture.asset("assets/icons/twitter.svg", color: Color(0xFF8A74FC)),
-                              ),
-                              Spacer(),
-                              IconButton(
-                                onPressed: () {},
-                                icon: SvgPicture.asset("assets/icons/behance.svg", color: Color(0xFF8A74FC)),
-                              ),
-                              Spacer(),
-                              IconButton(
-                                onPressed: () {},
-                                icon: SvgPicture.asset("assets/icons/dribble.svg", color: Color(0xFF8A74FC)),
                               ),
                               Spacer(flex: 4,),
                             ],

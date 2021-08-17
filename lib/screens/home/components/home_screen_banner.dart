@@ -1,4 +1,5 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../../../constants.dart';
@@ -91,15 +92,23 @@ class HomeScreenBanner extends StatelessWidget {
                     if(!Responsive.isMobileLarge(context))
                       ElevatedButton(
                         onPressed: () {},
-                        style: TextButton.styleFrom(
-                          padding: EdgeInsets.symmetric(
-                              horizontal: defaultPadding * 2,
-                              vertical: defaultPadding),
-                          backgroundColor: primaryColor,
+                        style: ButtonStyle(
+                          padding: MaterialStateProperty.all<EdgeInsetsGeometry>(
+                              EdgeInsets.symmetric(
+                                  horizontal: defaultPadding * 2,
+                                  vertical: defaultPadding
+                              )
+                          ),
+                          backgroundColor: MaterialStateProperty.all<Color>(primaryColor),
+                            shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                                RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(10.0),
+                                )
+                            )
                         ),
                         child: Text(
                           "EXPLORE NOW",
-                          style: TextStyle(color: darkColor),
+                          style: TextStyle(color: darkColor, fontWeight: FontWeight.w600),
                         ),
                       ),
                   ],
