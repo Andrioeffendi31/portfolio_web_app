@@ -1,5 +1,6 @@
 import 'package:delayed_display/delayed_display.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:portofolio_web_app/models/Project.dart';
 import 'package:portofolio_web_app/responsive.dart';
 
@@ -55,6 +56,9 @@ class ProjectItem extends StatelessWidget {
             Spacer(),
             TextButton(
               onPressed: () {},
+              style: ButtonStyle(
+                padding: MaterialStateProperty.all<EdgeInsetsGeometry>(EdgeInsets.all(0)),
+              ),
               child: Text(
                 "Read More >",
                 style: TextStyle(

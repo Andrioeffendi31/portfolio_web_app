@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       title: 'Andrio Effendi',
       //this is dark theme
       theme: ThemeData.dark().copyWith(
-        primaryColor: primaryColor,
+        primaryColor: secondaryColor,
         scaffoldBackgroundColor: bgColor,
         canvasColor: Colors.transparent,
         textTheme: GoogleFonts.nunitoTextTheme(Theme.of(context).textTheme)

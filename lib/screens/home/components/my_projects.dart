@@ -23,16 +23,7 @@ class MyProjects extends StatelessWidget {
             height: Responsive.isMobileLarge(context) ? 54 : 68,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(15),
-              gradient: LinearGradient(
-                colors: [
-                  const Color(0xFFFEA117),
-                  const Color(0xFFFEBE1F),
-                ],
-                begin: const FractionalOffset(1.0, 0.0),
-                end: const FractionalOffset(1.0, 0.0),
-                stops: [0.0, 1.0],
-                tileMode: TileMode.clamp,
-              ),
+              color: primaryColor,
               boxShadow: [
                 BoxShadow(
                   color: Colors.grey.withOpacity(0.1),

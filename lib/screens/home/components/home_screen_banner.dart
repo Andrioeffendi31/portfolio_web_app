@@ -167,15 +167,23 @@ class AnimatedBannerText extends StatelessWidget {
           speed: Duration(milliseconds: 60),
         ),
         TypewriterAnimatedText(
-          "responsive flutter web and mobile app",
+          "responsive flutter web app",
           speed: Duration(milliseconds: 60),
         ),
         TypewriterAnimatedText(
-          "2D and 3D games using Unity C#",
+          "responsive flutter mobile app",
           speed: Duration(milliseconds: 60),
         ),
         TypewriterAnimatedText(
-          "responsive web app using semantic UI",
+          "2D games using Unity C#",
+          speed: Duration(milliseconds: 60),
+        ),
+        TypewriterAnimatedText(
+          "3D games using Unity C#",
+          speed: Duration(milliseconds: 60),
+        ),
+        TypewriterAnimatedText(
+          "web app using semantic UI",
           speed: Duration(milliseconds: 60),
         ),
       ],

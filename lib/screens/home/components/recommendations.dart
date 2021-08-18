@@ -3,6 +3,7 @@ import 'package:portofolio_web_app/models/Recommendation.dart';
 import 'package:portofolio_web_app/screens/home/components/recommendation_item.dart';
 
 import '../../../constants.dart';
+import '../../../responsive.dart';
 
 class Recomendations extends StatelessWidget {
   const Recomendations({
@@ -16,6 +17,7 @@ class Recomendations extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          if(!Responsive.isMobileLarge(context))
           SizedBox(height: defaultPadding,),
           Padding(
             padding: const EdgeInsets.only(left: defaultPadding),
@@ -27,7 +29,8 @@ class Recomendations extends StatelessWidget {
               ),
             ),
           ),
-          const SizedBox(height: defaultPadding),
+          if(!Responsive.isMobileLarge(context))
+          const SizedBox(height: defaultPadding / 2),
           SingleChildScrollView(
             physics: BouncingScrollPhysics(),
             scrollDirection: Axis.horizontal,

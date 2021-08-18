@@ -45,7 +45,7 @@ class MyArts extends StatelessWidget {
           child: Responsive(
             mobile: GridViewArt(
                 crossAxisCount: 1,
-                childAspectRatio: 1.2
+                childAspectRatio: 1.3
             ),
             mobileLarge: GridViewArt(crossAxisCount: 1, childAspectRatio: 1.6,),
             tablet: GridViewArt(childAspectRatio: 1.5),

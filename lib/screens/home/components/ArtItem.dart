@@ -78,12 +78,7 @@ class ArtItem extends StatelessWidget {
             ElevatedButton(
               onPressed: () {},
               style: ButtonStyle(
-                  padding: MaterialStateProperty.all<EdgeInsetsGeometry>(
-                      EdgeInsets.symmetric(
-                          horizontal: Responsive.isDesktop(context) ? defaultPadding * 1.6 : defaultPadding * 1.5,
-                          vertical: Responsive.isDesktop(context) ? defaultPadding * 1.1 : defaultPadding
-                      )
-                  ),
+                  fixedSize: MaterialStateProperty.all<Size>(Size(130, 46)),
                   backgroundColor: MaterialStateProperty.all<Color>(secondaryColor),
                   shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                       RoundedRectangleBorder(
@@ -184,12 +179,7 @@ class ArtItem extends StatelessWidget {
             ElevatedButton(
               onPressed: () {},
               style: ButtonStyle(
-                  padding: MaterialStateProperty.all<EdgeInsetsGeometry>(
-                      EdgeInsets.symmetric(
-                          horizontal: Responsive.isDesktop(context) ? defaultPadding * 1.6 : defaultPadding * 1.5,
-                          vertical: Responsive.isDesktop(context) ? defaultPadding * 1.1 : defaultPadding
-                      )
-                  ),
+                  fixedSize: MaterialStateProperty.all<Size>(Size(130, 46)),
                   backgroundColor: MaterialStateProperty.all<Color>(secondaryColor),
                   shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                       RoundedRectangleBorder(
