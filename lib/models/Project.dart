@@ -11,7 +11,7 @@ List<Project> demo_projects = [
     "Small Change is a financial management app that will help you in performing daily financial management independently. This application was made for our Mobile Application Programming final project.",
   ),
   Project(
-    title: "Scurity SLip - Unity C#",
+    title: "Security SLip - Unity C#",
     description:
     "It's an \"security-checkup\" based simulation game. Your job is to make sure all the people who comes in, comes ou- I mean umm... They have proper entry card. This game was made for our Game Development 2 final project.",
   ),
